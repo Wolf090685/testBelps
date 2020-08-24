@@ -1,0 +1,155 @@
+/* Specification ===== */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    background: #fff;    
+}
+
+h2, h3, h4 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* FAQ ===== */
+.faq {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0;    
+}
+
+.faq::before {
+    position: absolute;
+    content: '';
+    top: 390px;
+    right: 60px;
+    width: 673px;
+    height: 549px;
+    background: url(../images/main-bg.png) center no-repeat;
+    background-size: cover;
+    z-index: -1;    
+}
+
+.faq__title {  
+    margin-bottom: 2px;  
+    font-size: 130px;
+    line-height: 153px;
+    font-weight: 800;
+    color: #f6f6f6;    
+}
+
+.faq__subtitle {
+    margin-bottom: 63px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.faq__title, 
+.faq__subtitle {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.faq__list {
+    width: 100%;
+    max-width: 670px;
+}
+
+.faq__item {
+    margin-bottom: 45px;    
+}
+
+.faq__item-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;    
+}
+
+.faq__item-header.active:hover .faq__item-icon-box {
+    filter: none; 
+}
+
+.faq__item-header.active .faq__item-icon {
+    transform: rotate(-45deg);
+    fill: #fff;    
+}
+
+.faq__item-header.active .faq__item-icon-box {
+    background: linear-gradient(180deg, #E41579 0%, #FF3F84 100%);
+}
+
+.faq__item-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 100%;
+    max-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #E41579;
+    transition: all 0.3s linear;
+}
+
+.faq__item-icon-box:hover {
+    filter: drop-shadow(0px 0px 5px rgba(228, 21, 121, 0.6));    
+}
+
+.faq__item-icon {
+    display: block;
+    width: 19px;
+    height: 19px;
+    fill: #E41579;
+    transition: all 0.3s linear;
+} 
+
+.faq__item-title {
+    font-weight: 700;    
+}
+
+.faq__item-content {
+    display: none;
+    padding-left: 100px;
+}
+
+.faq__item-header.active .faq__item-content {
+    display: block;
+}
+
+.faq__item-text span {
+    font-weight: 700;
+    color: #E41579;
+}
